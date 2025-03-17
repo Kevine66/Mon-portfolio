@@ -15,7 +15,7 @@ new Typewriter(textAnim, {
 })
 .typeString('Moi c\'est GANVO Kevine !') 
 .pauseFor(1)
-.typeString('<strong> <br> Dev web Full-Stack & Graphiste</strong>')
+.typeString('<strong> <br> Développeur web  & Graphiste</strong>')
 .start()
 document.addEventListener("DOMContentLoaded", () => {
     const projets = document.querySelectorAll(".projet");
