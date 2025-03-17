@@ -14,7 +14,22 @@ new Typewriter(textAnim, {
     //deleteSpeed: 20
 })
 .typeString('Moi c\'est GANVO Kevine !') 
-.pauseFor(300)
+.pauseFor(1)
 .typeString('<strong> <br> Dev web Full-Stack & Graphiste</strong>')
 .start()
+document.addEventListener("DOMContentLoaded", () => {
+    const projets = document.querySelectorAll(".projet");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    projets.forEach(projet => {
+        observer.observe(projet);
+    });
+});
 
