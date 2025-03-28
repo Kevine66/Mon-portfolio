@@ -103,6 +103,7 @@ section {
         margin: 10px auto;
     }
 }
+
 #projets {
     text-align: center;
     padding: 50px 20px;
@@ -155,6 +156,9 @@ section {
         flex-direction: column;
         align-items: center;
     }
+    .list-images img{
+        width: 100px;
+    }
 }
 .projet {
     opacity: 0;
@@ -165,4 +169,130 @@ section {
 .projet.visible {
     opacity: 1;
     transform: translateY(0);
+}
+/*.......................CAROUSSEL.....................*/
+.slide-container{
+    position: relative;
+    height: 350px;
+    max-width: 90%;
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    
+}
+.slide-container .slides{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+.slide-container .slides main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.slide-container .slides main:not(.active){
+    top: 0;
+    left: -100%;
+}
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+span.next{
+    right: 20px;
+}
+span.prev{
+    left: 20px;
+}
+span.next:hover, span.prev:hover{
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+}
+/*....................Keysframes.................*/
+@keyframes next1 {
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2 {
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1 {
+    from{
+        left: 0%;
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2 {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+/*...........DISPOSITION..............*/
+p.Bienvenue{
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 8px;
+    color: black;
+}
+p.moi{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: 3px;
+    color: black;
+}
+main{
+    color: black;
+}
+.list-images img{
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+}
+main .Création-de-différents-sites, .Conceptions-des-affiches-publicitaires, .Conceptions-des-Carte-de-visites,.Conceptions-des-flyers{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 3px;
+    color: black;
+}
+.list-images5 img{
+    width: 240px;
+    border-radius: 50%;
+}
+.list-images2 img{
+    width: 240px;
+}
+.list-images4 img{
+    width: 270px    ;
 }
